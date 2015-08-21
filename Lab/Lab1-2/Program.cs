@@ -12,7 +12,18 @@ namespace Lab1_2
         static void Main(string[] args)
         {
             // input
-            int[] input = { 4, 5, 2, 8, 9, 1, 2, 4, 3, 1 };
+            // int[] input = { 4, 5, 2, 8, 9, 1, 2, 4, 3, 1 };
+
+            // get input
+            int size;
+            Console.WriteLine("Enter size: ");
+            size = Convert.ToInt32(Console.ReadLine());
+            int[] input = new int[size];
+            for(int i = 0;i < size;i++)
+            {
+                Console.WriteLine("Enter {0}: ", i+1);
+                input[i] = Convert.ToInt32(Console.ReadLine());
+            }
             process(input);
             display(input);
         }
